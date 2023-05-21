@@ -21,15 +21,84 @@
             padding-bottom: 15px;
         }
 
+        .faq-item{
+            margin-bottom: 10px;
+        }
+
+        .faq-titulo{
+            font-size: 24px;
+            color: #6D5C77;
+            border: #ECECEC 2px solid;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background: #FFFFFF;
+            cursor: pointer;
+        }
+        .faq-titulo:hover{
+            color: #9958BF;
+        }
+
+        .faq-conteudo{
+            font-size: 16px;
+            color: #6D5C77;
+            border-left: #ECECEC 2px solid;
+            border-bottom: #ECECEC 2px solid;
+            border-right: #ECECEC 2px solid;
+            border-radius: 10px;
+            padding: 10px 15px;
+            background: #FFFFFF;
+            display: none;
+                        
+        }
+
+
     </style>
+
 </head>
 <body>
 
 <div id="logo"><img src="logo.svg"></div>
 
 <h1>FAQ</h1>
+<div class="faq-item">
+    <div class="faq-titulo" onclick="abrefechaconteudo('conteudo1')">Quais os primeiros passos na carreira de desenvolvedor?</div> 
+    <div id="conteudo1" class="faq-conteudo">Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem.
+    Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem 
+    ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum 
+    dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor 
+    lorem ipsum dollor lorem.</div>
+</div>
+<div class="faq-item">
+    <div class="faq-titulo" onclick="abrefechaconteudo('conteudo2')">Como faço meu primeiro projeto com JavaScript?</div> 
+    <div id="conteudo2" class="faq-conteudo">Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem.
+    Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem 
+    ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum 
+    dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor 
+    lorem ipsum dollor lorem.</div>
+</div>
+<div class="faq-item">
+    <div class="faq-titulo" onclick="abrefechaconteudo('conteudo3')">Quando ganha um dev?</div> 
+    <div id="conteudo3" class="faq-conteudo">Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem.
+    Lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem 
+    ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum 
+    dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor lorem ipsum dollor 
+    lorem ipsum dollor lorem.</div>
+</div>
 
+<script>
+    function abrefechaconteudo(id_do_conteudo){
+        let conteudo = document.getElementById(id_do_conteudo);
 
+        console.log(conteudo);
+        if(conteudo.style.display == "none"){
+            conteudo.style.display = "block";
+        } else { 
+            conteudo.style.display = "none";
+        }
+        
+        
+    }
+</script>
 
 </body>
 </html>
